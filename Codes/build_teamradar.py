@@ -25,7 +25,6 @@ if MODE == 'all':
     H1_ANCHOR = '<h1>Arecibo Observatory &mdash; Planetary Radar Object Catalog <span class="all-badge">ALL ATTEMPTS</span></h1>'
     H1_REPLACEMENT = (
         '<h1>TeamRadar Review &mdash; All-Attempts Catalog</h1>\n'
-        '<div class="uc-banner">&#9888; Under construction &mdash; this review tool is not ready for real submissions yet &#9888;</div>\n'
         '<div class="tr-banner">TEAM REVIEW BUILD &mdash; reviews the <b>all-attempts</b> catalog (detected and not-detected '
         'objects), separate from the live dashboard above. Submissions here ARE saved live to a shared Google Sheet '
         '(ask apophis@ucf.edu for access) - the SAME sheet the detected-catalog review tool uses. They do not update the '
