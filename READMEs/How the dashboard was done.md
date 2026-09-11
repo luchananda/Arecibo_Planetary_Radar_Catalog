@@ -12,6 +12,26 @@
 - **`TeamRadar-Revision-all.html`** — the same review layer for the all-attempts catalog.
   Currently marked **under construction**.
 
+## Initial data quest
+
+Before any of the current spreadsheets existed, the original approach (documented in the
+`All_obj_obs_count_AO_lu.xlsx` workbook's own `OLD_README` tab) was:
+
+1. Parse every folder under `/proj/radar/*` into a cleaned list (merged duplicate paths, removed
+   empty folders).
+2. Parse every file under the paper-logbook path into a list.
+3. Pair the two: objects with both a `/proj/radar/` folder *and* a matching logsheet.
+4. Clean that pairing (merge/dedupe remaining duplicate files and paths).
+5. Identify **orphans** — objects with a logsheet but no `/proj/radar/` folder. Each orphan's
+   logsheet was checked by hand for which tape the data was stored on, and searched for a
+   reported astrometry result to determine if it was a detection.
+6. Merge step 4 with any orphans that had reported astrometry or tape data into one Data & Log
+   Path list.
+7. That became the first Final List of objects with a `/proj/radar/` folder.
+
+A hand-drawn database design chart from this phase is archived at
+[diagrams.net](https://app.diagrams.net/#G1VSyqnAZeT0zt8w_bOKJS5Iu-uvY5_Fiq).
+
 ## Data pipeline
 
 Each object's catalog entry is built by merging several source spreadsheets (see
